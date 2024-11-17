@@ -1,0 +1,1334 @@
+Show in New Window
+[1] "integer"
+[1] "integer"
+Show in New Window
+
+Reliability analysis   
+Call: alpha(x = ANESGSS_merged[, c("CA_con", "CA_pro", "CA_pet", "CA_meetIP", 
+    "CA_meetON", "CA_boyc", "CA_cam", "CA_don", "CA_don_o")])
+
+ 
+    95% confidence boundaries 
+
+ Reliability if an item is dropped:
+
+ Item statistics 
+
+Non missing response frequency for each item
+             0    1 miss
+CA_con    0.71 0.29    0
+CA_pro    0.91 0.09    0
+CA_pet    0.69 0.31    0
+CA_meetIP 0.87 0.13    0
+CA_meetON 0.95 0.05    0
+CA_boyc   0.39 0.61    0
+CA_cam    0.97 0.03    0
+CA_don    0.93 0.07    0
+CA_don_o  0.78 0.22    0
+R Console
+Description:df [1 × 9]
+ 
+ 
+raw_alpha
+<dbl>
+std.alpha
+<dbl>
+G6(smc)
+<dbl>
+average_r
+<dbl>
+S/N
+<dbl>
+0.7013243	0.7203568	0.7135392	0.2225284	2.575986	
+1 row | 1-6 of 9 columns
+data.frame
+1 x 9
+Description:df [2 × 3]
+ 
+ 
+lower
+<dbl>
+alpha
+<dbl>
+upper
+<dbl>
+Feldt	0.67	0.7	0.73	
+Duhachek	0.68	0.7	0.73	
+2 rows
+data.frame
+2 x 3
+Description:df [9 × 8]
+ 
+ 
+raw_alpha
+<dbl>
+std.alpha
+<dbl>
+G6(smc)
+<dbl>
+average_r
+<dbl>
+S/N
+<dbl>
+CA_con	0.6805452	0.7010971	0.6921945	0.2267220	2.345568	
+CA_pro	0.6768103	0.6970632	0.6867967	0.2233778	2.301018	
+CA_pet	0.6610476	0.6890171	0.6785249	0.2168848	2.215611	
+CA_meetIP	0.6583368	0.6736228	0.6604273	0.2050827	2.063940	
+CA_meetON	0.6869579	0.7010487	0.6854846	0.2266816	2.345027	
+CA_boyc	0.6883630	0.7072551	0.6974275	0.2319466	2.415943	
+CA_cam	0.6947113	0.7114033	0.7016466	0.2355502	2.465042	
+CA_don	0.6808013	0.7026554	0.6879218	0.2280303	2.363102	
+CA_don_o	0.6497741	0.6781600	0.6627577	0.2084799	2.107134	
+9 rows | 1-6 of 8 columns
+data.frame
+9 x 8
+Description:df [9 × 7]
+ 
+ 
+n
+<dbl>
+raw.r
+<dbl>
+std.r
+<dbl>
+r.cor
+<dbl>
+r.drop
+<dbl>
+CA_con	1164	0.5828610	0.5323267	0.4285840	0.3703951	
+CA_pro	1164	0.5163639	0.5510463	0.4588988	0.3798599	
+CA_pet	1164	0.6464061	0.5873907	0.5101751	0.4488226	
+CA_meetIP	1164	0.6132542	0.6534537	0.6084265	0.4728264	
+CA_meetON	1164	0.4443649	0.5325532	0.4459089	0.3399093	
+CA_boyc	1164	0.5835552	0.5030818	0.3906663	0.3523841	
+CA_cam	1164	0.3765879	0.4829108	0.3624397	0.2902760	
+CA_don	1163	0.4880619	0.5250033	0.4341740	0.3674035	
+CA_don_o	1164	0.6610989	0.6344378	0.5861512	0.4923747	
+9 rows | 1-6 of 7 columns
+data.frame
+9 x 7
+Description:df [9 × 7]
+ 
+ 
+n
+<dbl>
+raw.r
+<dbl>
+std.r
+<dbl>
+r.cor
+<dbl>
+r.drop
+<dbl>
+mean
+<dbl>
+sd
+<dbl>
+CA_con	1164	0.5828610	0.5323267	0.4285840	0.3703951	0.29467354	0.4560918
+CA_pro	1164	0.5163639	0.5510463	0.4588988	0.3798599	0.09278351	0.2902535
+CA_pet	1164	0.6464061	0.5873907	0.5101751	0.4488226	0.31013746	0.4627485
+CA_meetIP	1164	0.6132542	0.6534537	0.6084265	0.4728264	0.12628866	0.3323172
+CA_meetON	1164	0.4443649	0.5325532	0.4459089	0.3399093	0.04639175	0.2104224
+CA_boyc	1164	0.5835552	0.5030818	0.3906663	0.3523841	0.60652921	0.4887297
+CA_cam	1164	0.3765879	0.4829108	0.3624397	0.2902760	0.02920962	0.1684660
+CA_don	1163	0.4880619	0.5250033	0.4341740	0.3674035	0.06792777	0.2517302
+CA_don_o	1164	0.6610989	0.6344378	0.5861512	0.4923747	0.22422680	0.4172514
+9 rows
+Show in New Window
+
+Reliability analysis   
+Call: alpha(x = ANESGSS_merged[, c("CR_slav", "CR_rpdif", "CR_ins", 
+    "CR_wrk", "CR_polbw", "CR_fedbw", "CR_uu")])
+
+ 
+    95% confidence boundaries 
+
+ Reliability if an item is dropped:
+
+ Item statistics 
+
+Non missing response frequency for each item
+           -5    1    2    3    4    5 miss
+CR_slav  0.00 0.16 0.16 0.14 0.28 0.26 0.03
+CR_rpdif 0.00 0.09 0.23 0.34 0.19 0.15 0.03
+CR_ins   0.03 0.04 0.10 0.36 0.29 0.19 0.00
+CR_wrk   0.00 0.09 0.17 0.20 0.21 0.33 0.03
+CR_polbw 0.00 0.01 0.01 0.30 0.08 0.61 0.05
+CR_fedbw 0.00 0.08 0.04 0.36 0.07 0.45 0.06
+CR_uu    0.00 0.19 0.10 0.17 0.11 0.43 0.14
+R Console
+Description:df [1 × 9]
+ 
+ 
+raw_alpha
+<dbl>
+std.alpha
+<dbl>
+G6(smc)
+<dbl>
+average_r
+<dbl>
+S/N
+<dbl>
+0.7813761	0.8198675	0.8322748	0.3940164	4.551468	
+1 row | 1-6 of 9 columns
+data.frame
+1 x 9
+Description:df [2 × 3]
+ 
+ 
+lower
+<dbl>
+alpha
+<dbl>
+upper
+<dbl>
+Feldt	0.76	0.78	0.8	
+Duhachek	0.76	0.78	0.8	
+2 rows
+data.frame
+2 x 3
+Description:df [7 × 8]
+ 
+ 
+raw_alpha
+<dbl>
+std.alpha
+<dbl>
+G6(smc)
+<dbl>
+average_r
+<dbl>
+S/N
+<dbl>
+CR_slav	0.7339539	0.7880863	0.7991379	0.3826463	3.718901	
+CR_rpdif	0.7624974	0.8071073	0.7982219	0.4108538	4.184230	
+CR_ins	0.8342057	0.8356853	0.8184890	0.4587711	5.085882	
+CR_wrk	0.7340752	0.7872549	0.8004065	0.3814726	3.700460	
+CR_polbw	0.7440913	0.7850128	0.7979373	0.3783311	3.651440	
+CR_fedbw	0.7311958	0.7819717	0.7957159	0.3741238	3.586560	
+CR_uu	0.7238738	0.7803580	0.7930937	0.3719160	3.552863	
+7 rows | 1-6 of 8 columns
+data.frame
+7 x 8
+Description:df [7 × 7]
+ 
+ 
+n
+<dbl>
+raw.r
+<dbl>
+std.r
+<dbl>
+r.cor
+<dbl>
+r.drop
+<dbl>
+CR_slav	1129	0.7408647	0.7283885	0.6744929	0.6012604	
+CR_rpdif	1125	0.6214709	0.6411972	0.5726423	0.4614006	
+CR_ins	1159	0.8290944	0.4930819	0.3946302	0.1768491	
+CR_wrk	1128	0.7471188	0.7320163	0.6747256	0.6068559	
+CR_polbw	1108	0.7247281	0.7417269	0.6880221	0.6134100	
+CR_fedbw	1098	0.7608670	0.7547320	0.7054039	0.6266322	
+CR_uu	999	0.7866254	0.7615563	0.7171566	0.6398413	
+7 rows | 1-6 of 7 columns
+data.frame
+7 x 7
+Description:df [7 × 7]
+ 
+ 
+n
+<dbl>
+raw.r
+<dbl>
+std.r
+<dbl>
+r.cor
+<dbl>
+r.drop
+<dbl>
+mean
+<dbl>
+sd
+<dbl>
+CR_slav	1129	0.7408647	0.7283885	0.6744929	0.6012604	3.317095	1.4162432
+CR_rpdif	1125	0.6214709	0.6411972	0.5726423	0.4614006	3.088000	1.1721441
+CR_ins	1159	0.8290944	0.4930819	0.3946302	0.1768491	3.262295	1.7415630
+CR_wrk	1128	0.7471188	0.7320163	0.6747256	0.6068559	3.525709	1.3338985
+CR_polbw	1108	0.7247281	0.7417269	0.6880221	0.6134100	4.272563	0.9728407
+CR_fedbw	1098	0.7608670	0.7547320	0.7054039	0.6266322	3.757741	1.2886006
+CR_uu	999	0.7866254	0.7615563	0.7171566	0.6398413	3.497497	1.5692894
+7 rows
+Show in New Window
+[1] "integer"
+[1] "integer"
+Show in New Window
+
+Call:
+lm(formula = CM_mean ~ PARSOL_2, data = ANESGSS_weights, weights = ANESGSS_weights$V200018b)
+
+Weighted Residuals:
+    Min      1Q  Median      3Q     Max 
+-2.3126 -0.3180  0.0215  0.4017  2.1336 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  3.04559    0.05534  55.033  < 2e-16 ***
+PARSOL_2     0.08172    0.02072   3.945 8.74e-05 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.5984 on 749 degrees of freedom
+  (413 observations deleted due to missingness)
+Multiple R-squared:  0.02035,	Adjusted R-squared:  0.01905 
+F-statistic: 15.56 on 1 and 749 DF,  p-value: 8.739e-05
+
+Show in New Window
+
+Call:
+lm(formula = CR_weight ~ PS_weight_2, data = ANESGSS_weights)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-2.42444 -0.71015  0.05728  0.75385  1.57556 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  3.29930    0.08128  40.590  < 2e-16 ***
+PS_weight_2  0.12514    0.03031   4.128 4.11e-05 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.887 on 675 degrees of freedom
+  (487 observations deleted due to missingness)
+Multiple R-squared:  0.02463,	Adjusted R-squared:  0.02318 
+F-statistic: 17.04 on 1 and 675 DF,  p-value: 4.111e-05
+
+Show in New Window
+
+Call:
+lm(formula = CM_weight ~ PS_weight_2, data = ANESGSS_weights)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.97901 -0.47674 -0.07561  0.52155  1.62439 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  3.07447    0.05697  53.966  < 2e-16 ***
+PS_weight_2  0.10114    0.02132   4.744 2.51e-06 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.6495 on 749 degrees of freedom
+  (413 observations deleted due to missingness)
+Multiple R-squared:  0.02917,	Adjusted R-squared:  0.02787 
+F-statistic:  22.5 on 1 and 749 DF,  p-value: 2.51e-06
+
+> 
+> #recoding scale from 7 to 5 in reverse for V202621
+> ANESGSS_merged$CR_uu <- recode(ANESGSS_merged$V202621,
++                           `1` = 5,
++                           `2` = 5,
++                           `3` = 4,
++                           `4` = 3,
++                           `5` = 2,
++                           `6` = 1,
++                           `7` = 1)
+> 
+> 
+> #renaming variables for CR scale
+> 
+> ANESGSS_merged$CR_ins <- ANESGSS_merged$V202304
+> ANESGSS_merged$CR_rpdif <- ANESGSS_merged$V202305
+> ANESGSS_merged$CR_opp <- ANESGSS_merged$V202317
+> ANESGSS_merged$CR_wrk <- ANESGSS_merged$V202303
+> 
+> alpha_result <- alpha(ANESGSS_merged[, c("CR_slav", "CR_rpdif", "CR_ins", "CR_wrk", "CR_polbw", "CR_fedbw", "CR_uu")])
+> 
+> print(alpha_result)
+
+Reliability analysis   
+Call: alpha(x = ANESGSS_merged[, c("CR_slav", "CR_rpdif", "CR_ins", 
+    "CR_wrk", "CR_polbw", "CR_fedbw", "CR_uu")])
+
+ 
+    95% confidence boundaries 
+
+ Reliability if an item is dropped:
+
+ Item statistics 
+
+Non missing response frequency for each item
+           -5    1    2    3    4    5 miss
+CR_slav  0.00 0.16 0.16 0.14 0.28 0.26 0.03
+CR_rpdif 0.00 0.09 0.23 0.34 0.19 0.15 0.03
+CR_ins   0.03 0.04 0.10 0.36 0.29 0.19 0.00
+CR_wrk   0.00 0.09 0.17 0.20 0.21 0.33 0.03
+CR_polbw 0.00 0.01 0.01 0.30 0.08 0.61 0.05
+CR_fedbw 0.00 0.08 0.04 0.36 0.07 0.45 0.06
+CR_uu    0.00 0.19 0.10 0.17 0.11 0.43 0.14
+> 
+> ANESGSS_merged$CR2_mean <- (ANESGSS_merged$CR_slav + ANESGSS_merged$CR_rpdif + ANESGSS_merged$CR_ins + ANESGSS_merged$CR_wrk + ANESGSS_merged$CR_polbw + ANESGSS_merged$CR_fedbw + ANESGSS_merged$CR_uu)/7
+> 
+> table(ANESGSS_merged$CM_worry)
+< table of extent 0 >
+> # coding variables
+> ANESGSS_merged$CM_equal <- recode(ANESGSS_merged$V202260,
++                           `1` = 5,
++                           `2` = 4,
++                           `3` = 3,
++                           `4` = 2,
++                           `5` = 1)
+> 
+> ANESGSS_merged$CM_worry <- recode(ANESGSS_merged$V202261,
++                           `1` = 5,
++                           `2` = 4,
++                           `3` = 3,
++                           `4` = 2,
++                           `5` = 1)
+> 
+> ANESGSS_merged$CM_rII <- recode(ANESGSS_merged$V202259x,
++                           `1` = 5,
++                           `2` = 5,
++                           `3` = 4,
++                           `4` = 3,
++                           `5` = 2,
++                           `6` = 1,
++                           `7` = 1)
+> 
+> ANESGSS_merged$CM_und <- recode(ANESGSS_merged$V202215,
++                           `1` = 5,
++                           `2` = 4,
++                           `3` = 3,
++                           `4` = 2,
++                           `5` = 1)
+> 
+> ANESGSS_merged$CM_pay <- recode(ANESGSS_merged$V202575,
++                           `1` = 5,
++                           `2` = 4,
++                           `3` = 3,
++                           `4` = 2,
++                           `5` = 1)
+> 
+> ANESGSS_merged$CM_gov <- recode(ANESGSS_merged$V202255x,
++                           `1` = 1,
++                           `2` = 2,
++                           `3` = 3,
++                           `4` = 4,
++                           `5` = 5,
++                           `6` = 5)
+Warning: Unreplaced values treated as NA as `.x` is not compatible.
+Please specify replacements exhaustively or supply `.default`.
+> 
+> ANESGSS_merged$CM_hp <- recode(ANESGSS_merged$HELPPOOR_2,
++                           `1` = 5,
++                           `2` = 4,
++                           `3` = 3,
++                           `4` = 2,
++                           `5` = 1)
+> 
+> ANESGSS_merged$CM_hn <- recode(ANESGSS_merged$HELPNOT_2,
++                           `1` = 5,
++                           `2` = 4,
++                           `3` = 3,
++                           `4` = 2,
++                           `5` = 1)
+> 
+> ANESGSS_merged$CM_care <- ANESGSS_merged$V202212
+> ANESGSS_merged$CM_say <- ANESGSS_merged$V202213
+> ANESGSS_merged$CM_comp <- ANESGSS_merged$V202214
+> ANESGSS_merged$CM_worry <- ANESGSS_merged$V202261
+> ANESGSS_merged$CM_syst <- ANESGSS_merged$V202261
+> ANESGSS_merged$CM_prob <- ANESGSS_merged$V202262
+> 
+> 
+> alpha_result <- alpha(ANESGSS_merged[, c("CM_equal", "CM_und", "CM_say", "CM_pay", "CM_rII", "CM_comp", "CM_care", "CM_worry", "CM_prob", "CM_hp")])
+> 
+> print(alpha_result)
+
+Reliability analysis   
+Call: alpha(x = ANESGSS_merged[, c("CM_equal", "CM_und", "CM_say", 
+    "CM_pay", "CM_rII", "CM_comp", "CM_care", "CM_worry", "CM_prob", 
+    "CM_hp")])
+
+ 
+    95% confidence boundaries 
+
+ Reliability if an item is dropped:
+
+ Item statistics 
+
+Non missing response frequency for each item
+            1    2    3    4    5 miss
+CM_equal 0.03 0.05 0.11 0.29 0.52 0.02
+CM_und   0.03 0.11 0.43 0.30 0.12 0.01
+CM_say   0.24 0.34 0.13 0.22 0.07 0.01
+CM_pay   0.02 0.19 0.23 0.39 0.17 0.05
+CM_rII   0.27 0.02 0.25 0.02 0.44 0.02
+CM_comp  0.05 0.17 0.23 0.41 0.13 0.01
+CM_care  0.27 0.40 0.15 0.15 0.02 0.01
+CM_worry 0.10 0.17 0.19 0.20 0.34 0.02
+CM_prob  0.03 0.12 0.24 0.28 0.32 0.02
+CM_hp    0.12 0.11 0.39 0.14 0.24 0.31
+> 
+> ANESGSS_merged$CM_mean <- (ANESGSS_merged$CM_equal + ANESGSS_merged$CM_und + ANESGSS_merged$CM_say + ANESGSS_merged$CM_pay + ANESGSS_merged$CM_rII + ANESGSS_merged$CM_comp + ANESGSS_merged$CM_care + ANESGSS_merged$CM_worry + ANESGSS_merged$CM_prob + ANESGSS_merged$CM_hp)/10
+> ANESGSS_merged$kids_b <- ifelse(ANESGSS_merged$KIDSSOL_1B == 6, 1, 0)
+> 
+> #check the class of the ID variable, they both need to be numeric
+> class(ANESGSS_merged$V200001)
+[1] "integer"
+> 
+> #make the yearID variable numeric
+> ANESGSS_merged$V200001 <- as.numeric(ANESGSS_merged$V200001)
+> 
+> 
+> #check class of the GSS2018 ID variable
+> class(BRIDGE2020$V200001)
+[1] "integer"
+> 
+> #make the yearID variable in GSS2018 numeric
+> BRIDGE2020$V200001 <- as.numeric(BRIDGE2020$V200001)
+> 
+> 
+> 
+> #check documentation on inner_join, this unlike full_join should only keep the participants whose ID is in both datsets. 
+> ?inner_join 
+> 
+> ANESGSS_weights <- inner_join(ANESGSS_merged, BRIDGE2020, by = "V200001")
+> 
+> #ANESGSS_merged2 <- full_join(ANES_GSS2, GSS2018, by = "YEARID")
+> 
+> #ANESGSS_merged[ANESGSS_merged=="-1"] <- NA
+> #ANESGSS_merged[ANESGSS_merged=="-1"] <- NA
+> 
+> svy_design <- svydesign(ids = ~1, data = ANESGSS_weights, weights = ~V200018b)
+> subset_kids <- subset(ANESGSS_weights, kids_b == 0)
+> subset_kids <- subset(ANESGSS_weights, kids_b == 0)
+> 
+> 
+> subset_kids$CA_weight2 <- apply(subset_kids[, c("CA_mean")], 1, 
++                            function(x) weighted.mean(x, subset_kids$V200018b))
+Error in apply(subset_kids[, c("CA_mean")], 1, function(x) weighted.mean(x,  : 
+  dim(X) must have a positive length
+> subset_kids <- subset_kids %>%
++   rowwise() %>%
++   mutate(CA_weight = weighted.mean(c(CA_mean), V200018b))
+> 
+> subset_kids <- subset_kids %>%
++   rowwise() %>%
++   mutate(KS_weight_1B = weighted.mean(c(KIDSSOL_1B), V200018b))
+> model <- lm(CA_weight ~ KS_weight_1B, data = subset_kids)
+> summary(model)
+
+Call:
+lm(formula = CA_weight ~ KS_weight_1B, data = subset_kids)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.27007 -0.15896 -0.05423  0.11563  0.78230 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  0.139154   0.022572   6.165  1.9e-09 ***
+KS_weight_1B 0.026183   0.008682   3.016  0.00275 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1876 on 359 degrees of freedom
+Multiple R-squared:  0.02471,	Adjusted R-squared:  0.02199 
+F-statistic: 9.095 on 1 and 359 DF,  p-value: 0.002745
+
+> 
+> ANESGSS_weights <- ANESGSS_weights %>%
++   rowwise() %>%
++   mutate(CR_weight = weighted.mean(c(CR2_mean), V200018b))
+> 
+> subset_kids <- subset_kids %>%
++   rowwise() %>%
++   mutate(PS_weight_2 = weighted.mean(c(PARSOL_2), V200018b))
+> 
+> model <- lm(CR_weight ~ PS_weight_2, data = ANESGSS_weights)
+Error in eval(predvars, data, env) : object 'PS_weight_2' not found
+> 
+> ANESGSS_weights <- ANESGSS_weights %>%
++   rowwise() %>%
++   mutate(CR_weight = weighted.mean(c(CR2_mean), V200018b))
+> 
+> ANESGSS_weights <- ANESGSS_weights %>%
++   rowwise() %>%
++   mutate(PS_weight_2 = weighted.mean(c(PARSOL_2), V200018b))
+> 
+> model <- lm(CR_weight ~ PS_weight_2, data = ANESGSS_weights)
+> summary(model)
+
+Call:
+lm(formula = CR_weight ~ PS_weight_2, data = ANESGSS_weights)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-2.42444 -0.71015  0.05728  0.75385  1.57556 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  3.29930    0.08128  40.590  < 2e-16 ***
+PS_weight_2  0.12514    0.03031   4.128 4.11e-05 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.887 on 675 degrees of freedom
+  (487 observations deleted due to missingness)
+Multiple R-squared:  0.02463,	Adjusted R-squared:  0.02318 
+F-statistic: 17.04 on 1 and 675 DF,  p-value: 4.111e-05
+
+> 
+> ANESGSS_weights <- ANESGSS_weights %>%
++   rowwise() %>%
++   mutate(CM_weight = weighted.mean(c(CM_mean), V200018b))
+> 
+> model <- lm(CR_weight ~ PS_weight_2, data = ANESGSS_weights)
+> summary(model)
+
+Call:
+lm(formula = CR_weight ~ PS_weight_2, data = ANESGSS_weights)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-2.42444 -0.71015  0.05728  0.75385  1.57556 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  3.29930    0.08128  40.590  < 2e-16 ***
+PS_weight_2  0.12514    0.03031   4.128 4.11e-05 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.887 on 675 degrees of freedom
+  (487 observations deleted due to missingness)
+Multiple R-squared:  0.02463,	Adjusted R-squared:  0.02318 
+F-statistic: 17.04 on 1 and 675 DF,  p-value: 4.111e-05
+
+> 
+> ANESGSS_weights <- ANESGSS_weights %>%
++   rowwise() %>%
++   mutate(CM_weight = weighted.mean(c(CM_mean), V200018b))
+> 
+> model <- lm(CM_weight ~ PS_weight_2, data = ANESGSS_weights)
+> summary(model)
+
+Call:
+lm(formula = CM_weight ~ PS_weight_2, data = ANESGSS_weights)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.97901 -0.47674 -0.07561  0.52155  1.62439 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  3.07447    0.05697  53.966  < 2e-16 ***
+PS_weight_2  0.10114    0.02132   4.744 2.51e-06 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.6495 on 749 degrees of freedom
+  (413 observations deleted due to missingness)
+Multiple R-squared:  0.02917,	Adjusted R-squared:  0.02787 
+F-statistic:  22.5 on 1 and 749 DF,  p-value: 2.51e-06
+
+> print(alpha_result)
+
+Reliability analysis   
+Call: alpha(x = ANESGSS_merged[, c("CM_equal", "CM_und", "CM_say", 
+    "CM_pay", "CM_rII", "CM_comp", "CM_care", "CM_worry", "CM_prob", 
+    "CM_hp")])
+
+ 
+    95% confidence boundaries 
+
+ Reliability if an item is dropped:
+
+ Item statistics 
+
+Non missing response frequency for each item
+            1    2    3    4    5 miss
+CM_equal 0.03 0.05 0.11 0.29 0.52 0.02
+CM_und   0.03 0.11 0.43 0.30 0.12 0.01
+CM_say   0.24 0.34 0.13 0.22 0.07 0.01
+CM_pay   0.02 0.19 0.23 0.39 0.17 0.05
+CM_rII   0.27 0.02 0.25 0.02 0.44 0.02
+CM_comp  0.05 0.17 0.23 0.41 0.13 0.01
+CM_care  0.27 0.40 0.15 0.15 0.02 0.01
+CM_worry 0.10 0.17 0.19 0.20 0.34 0.02
+CM_prob  0.03 0.12 0.24 0.28 0.32 0.02
+CM_hp    0.12 0.11 0.39 0.14 0.24 0.31
+> ANESGSS_weights <- ANESGSS_weights %>%
++   rowwise() %>%
++   mutate(CM_weight = weighted.mean(c(CM_mean), V200018b))
+> ANESGSS_weights <- ANESGSS_weights %>%
++   rowwise() %>%
++   mutate(CM_equal_w = weighted.mean(c(CM_equal), V200018b))
+> 
+> ANESGSS_weights <- ANESGSS_weights %>%
++   rowwise() %>%
++   mutate(CM_und_w = weighted.mean(c(CM_und), V200018b))
+> 
+> ANESGSS_weights <- ANESGSS_weights %>%
++   rowwise() %>%
++   mutate(CM_say_w = weighted.mean(c(CM_say), V200018b))
+> 
+> ANESGSS_weights <- ANESGSS_weights %>%
++   rowwise() %>%
++   mutate(CM_pay_w = weighted.mean(c(CM_pay), V200018b))
+> 
+> ANESGSS_weights <- ANESGSS_weights %>%
++   rowwise() %>%
++   mutate(CM_rII_w = weighted.mean(c(CM_rII), V200018b))
+> 
+> ANESGSS_weights <- ANESGSS_weights %>%
++   rowwise() %>%
++   mutate(CM_comp_w = weighted.mean(c(CM_comp), V200018b))
+> 
+> ANESGSS_weights <- ANESGSS_weights %>%
++   rowwise() %>%
++   mutate(CM_care_w = weighted.mean(c(CM_care), V200018b))
+> 
+> ANESGSS_weights <- ANESGSS_weights %>%
++   rowwise() %>%
++   mutate(CM_worry_w = weighted.mean(c(CM_worry), V200018b))
+> 
+> ANESGSS_weights <- ANESGSS_weights %>%
++   rowwise() %>%
++   mutate(CM_prob_w = weighted.mean(c(CM_prob), V200018b))
+> 
+> ANESGSS_weights <- ANESGSS_weights %>%
++   rowwise() %>%
++   mutate(CM_hp_w = weighted.mean(c(CM_hp), V200018b))
+> 
+> alpha_result <- alpha(ANESGSS_merged[, c("CM_equal", "CM_und", "CM_say", "CM_pay", "CM_rII", "CM_comp", "CM_care", "CM_worry", "CM_prob", "CM_hp")])
+> 
+> print(alpha_result)
+
+Reliability analysis   
+Call: alpha(x = ANESGSS_merged[, c("CM_equal", "CM_und", "CM_say", 
+    "CM_pay", "CM_rII", "CM_comp", "CM_care", "CM_worry", "CM_prob", 
+    "CM_hp")])
+
+ 
+    95% confidence boundaries 
+
+ Reliability if an item is dropped:
+
+ Item statistics 
+
+Non missing response frequency for each item
+            1    2    3    4    5 miss
+CM_equal 0.03 0.05 0.11 0.29 0.52 0.02
+CM_und   0.03 0.11 0.43 0.30 0.12 0.01
+CM_say   0.24 0.34 0.13 0.22 0.07 0.01
+CM_pay   0.02 0.19 0.23 0.39 0.17 0.05
+CM_rII   0.27 0.02 0.25 0.02 0.44 0.02
+CM_comp  0.05 0.17 0.23 0.41 0.13 0.01
+CM_care  0.27 0.40 0.15 0.15 0.02 0.01
+CM_worry 0.10 0.17 0.19 0.20 0.34 0.02
+CM_prob  0.03 0.12 0.24 0.28 0.32 0.02
+CM_hp    0.12 0.11 0.39 0.14 0.24 0.31
+> alpha_result <- alpha(ANESGSS_merged[, c("CM_equal_w", "CM_und_w", "CM_say_W", "CM_pay_w", "CM_rII_w", "CM_comp_w", "CM_care_w", "CM_worry_w", "CM_prob_w", "CM_hp_w")])
+Error in `[.data.frame`(ANESGSS_merged, , c("CM_equal_w", "CM_und_w",  : 
+  undefined columns selected
+> alpha_result <- alpha(ANESGSS_weights[, c("CM_equal_w", "CM_und_w", "CM_say_W", "CM_pay_w", "CM_rII_w", "CM_comp_w", "CM_care_w", "CM_worry_w", "CM_prob_w", "CM_hp_w")])
+Error in `ANESGSS_weights[, c("CM_equal_w", "CM_und_w", "CM_say_W", "CM_pay_w", "CM_rII_w", "CM_comp_w", "CM_care_w", "CM_worry_w", "CM_prob_w", "CM_hp_w")]`:
+! Can't subset columns that don't exist.
+✖ Column `CM_say_W` doesn't exist.
+Backtrace:
+ 1. psych::alpha(...)
+ 5. tibble:::`[.tbl_df`(...)
+> ANESGSS_weights <- ANESGSS_weights %>%
++   rowwise() %>%
++   mutate(CM_say_w = weighted.mean(c(CM_say), V200018b))
+> table(ANESGSS_weights$CM_say_w)
+
+  1   2   3   4   5 
+276 395 148 249  83 
+> table(ANESGSS_merged$CM_say)
+
+  1   2   3   4   5 
+276 395 148 249  83 
+> 
+> alpha_result <- alpha(ANESGSS_weights[, c("CM_equal_w", "CM_und_w", "CM_say_w", "CM_pay_w", "CM_rII_w", "CM_comp_w", "CM_care_w", "CM_worry_w", "CM_prob_w", "CM_hp_w")])
+> 
+> print(alpha_result)
+
+Reliability analysis   
+Call: alpha(x = ANESGSS_weights[, c("CM_equal_w", "CM_und_w", "CM_say_w", 
+    "CM_pay_w", "CM_rII_w", "CM_comp_w", "CM_care_w", "CM_worry_w", 
+    "CM_prob_w", "CM_hp_w")])
+
+ 
+    95% confidence boundaries 
+
+ Reliability if an item is dropped:
+
+ Item statistics 
+
+Non missing response frequency for each item
+              1    2    3    4    5 miss
+CM_equal_w 0.03 0.05 0.11 0.29 0.52 0.02
+CM_und_w   0.03 0.11 0.43 0.30 0.12 0.01
+CM_say_w   0.24 0.34 0.13 0.22 0.07 0.01
+CM_pay_w   0.02 0.19 0.23 0.38 0.17 0.05
+CM_rII_w   0.27 0.02 0.25 0.02 0.44 0.02
+CM_comp_w  0.05 0.17 0.23 0.41 0.13 0.01
+CM_care_w  0.27 0.40 0.15 0.15 0.03 0.01
+CM_worry_w 0.10 0.17 0.19 0.19 0.34 0.02
+CM_prob_w  0.03 0.12 0.24 0.28 0.33 0.02
+CM_hp_w    0.12 0.11 0.39 0.14 0.24 0.31
+> 
+> ANESGSS_weights <- ANESGSS_weights %>%
++   rowwise() %>%
++   mutate(CM_equal_w = weighted.mean(c(CM_equal), V200018b, na.rm = TRUE))
+> 
+> ANESGSS_weights <- ANESGSS_weights %>%
++   rowwise() %>%
++   mutate(CM_und_w = weighted.mean(c(CM_und), V200018b, na.rm = TRUE)))
+Error: unexpected ')' in:
+"  rowwise() %>%
+  mutate(CM_und_w = weighted.mean(c(CM_und), V200018b, na.rm = TRUE)))"
+> ANESGSS_weights <- ANESGSS_weights %>%
++   rowwise() %>%
++   mutate(CM_equal_w = weighted.mean(c(CM_equal), V200018b, na.rm = TRUE)))
+Error: unexpected ')' in:
+"  rowwise() %>%
+  mutate(CM_equal_w = weighted.mean(c(CM_equal), V200018b, na.rm = TRUE)))"
+> ANESGSS_weights <- ANESGSS_weights %>%
++   rowwise() %>%
++   mutate(CM_equal_w = weighted.mean(c(CM_equal), V200018b, na.rm = TRUE))
+> 
+> ANESGSS_weights <- ANESGSS_weights %>%
++   rowwise() %>%
++   mutate(CM_und_w = weighted.mean(c(CM_und), V200018b, na.rm = TRUE))
+> 
+> ANESGSS_weights <- ANESGSS_weights %>%
++   rowwise() %>%
++   mutate(CM_say_w = weighted.mean(c(CM_say), V200018b, na.rm = TRUE))
+> 
+> ANESGSS_weights <- ANESGSS_weights %>%
++   rowwise() %>%
++   mutate(CM_pay_w = weighted.mean(c(CM_pay), V200018b, na.rm = TRUE))
+> 
+> ANESGSS_weights <- ANESGSS_weights %>%
++   rowwise() %>%
++   mutate(CM_rII_w = weighted.mean(c(CM_rII), V200018b, na.rm = TRUE))
+> 
+> ANESGSS_weights <- ANESGSS_weights %>%
++   rowwise() %>%
++   mutate(CM_comp_w = weighted.mean(c(CM_comp), V200018b, na.rm = TRUE))
+> 
+> ANESGSS_weights <- ANESGSS_weights %>%
++   rowwise() %>%
++   mutate(CM_care_w = weighted.mean(c(CM_care), V200018b, na.rm = TRUE))
+> 
+> ANESGSS_weights <- ANESGSS_weights %>%
++   rowwise() %>%
++   mutate(CM_worry_w = weighted.mean(c(CM_worry), V200018b, na.rm = TRUE))
+> 
+> ANESGSS_weights <- ANESGSS_weights %>%
++   rowwise() %>%
++   mutate(CM_prob_w = weighted.mean(c(CM_prob), V200018b, na.rm = TRUE))
+> 
+> ANESGSS_weights <- ANESGSS_weights %>%
++   rowwise() %>%
++   mutate(CM_hp_w = weighted.mean(c(CM_hp), V200018b, na.rm = TRUE))
+> alpha_result <- alpha(ANESGSS_weights[, c("CM_equal_w", "CM_und_w", "CM_say_w", "CM_pay_w", "CM_rII_w", "CM_comp_w", "CM_care_w", "CM_worry_w", "CM_prob_w", "CM_hp_w")])
+> 
+> print(alpha_result)
+
+Reliability analysis   
+Call: alpha(x = ANESGSS_weights[, c("CM_equal_w", "CM_und_w", "CM_say_w", 
+    "CM_pay_w", "CM_rII_w", "CM_comp_w", "CM_care_w", "CM_worry_w", 
+    "CM_prob_w", "CM_hp_w")])
+
+ 
+    95% confidence boundaries 
+
+ Reliability if an item is dropped:
+
+ Item statistics 
+
+Non missing response frequency for each item
+              1    2    3    4    5 miss
+CM_equal_w 0.03 0.05 0.11 0.29 0.52 0.02
+CM_und_w   0.03 0.11 0.43 0.30 0.12 0.01
+CM_say_w   0.24 0.34 0.13 0.22 0.07 0.01
+CM_pay_w   0.02 0.19 0.23 0.38 0.17 0.05
+CM_rII_w   0.27 0.02 0.25 0.02 0.44 0.02
+CM_comp_w  0.05 0.17 0.23 0.41 0.13 0.01
+CM_care_w  0.27 0.40 0.15 0.15 0.03 0.01
+CM_worry_w 0.10 0.17 0.19 0.19 0.34 0.02
+CM_prob_w  0.03 0.12 0.24 0.28 0.33 0.02
+CM_hp_w    0.12 0.11 0.39 0.14 0.24 0.31
+> 
+> table(ANESGSS_weights$V200018b)
+
+0.0724133858750495 0.0757098860767035 0.0758261589846896 0.0773147977544229 0.0788687521217173 0.0857446534554901 0.0891168799440021 0.0930149523355742 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+0.0934524004622368 0.0948236290560862 0.0950654699181416 0.0968493839735251  0.101554833303177  0.101835821861677  0.102368223922779  0.107723576535946 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.108077361909036  0.108899273492492  0.112050550102176  0.112096155028562  0.113299606696087  0.113526127593217  0.113919266587432  0.116174970210026 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.117159265381716  0.120097498424562  0.120175206348681  0.121598955527999  0.121772679897698  0.122529681454707  0.127366207048557  0.127479309905191 
+                 2                  1                  1                  1                  1                  1                  1                  1 
+ 0.127621934511269  0.127698522373258  0.127864194190076  0.128426362291126  0.129863231359621  0.130058790758679  0.130591045359748  0.131564373400875 
+                 1                  1                  2                  1                  1                  1                  1                  1 
+ 0.131822777916162  0.132161649863963  0.132624646171683  0.133950817023617  0.136151219522423   0.13693628275029  0.138305392442427  0.139171178687609 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.139337298736075  0.139504951101631  0.139956109035796  0.140775480168645  0.142918633259931  0.144222530480366  0.145301945461296  0.145704390606571 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+  0.14646583075337  0.147495759591992  0.148545625590526  0.149235148582597  0.149862534917876  0.150030627378613   0.15114600720992   0.15365067050358 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.154270164605459   0.15615802325923  0.156311387633991  0.156661558922748  0.157160020361854  0.157567222544745  0.157617543562497  0.157630169107868 
+                 1                  2                  1                  1                  1                  1                  1                  2 
+  0.15798144302634   0.15897327731453  0.160128369005721  0.162751569757127  0.163836210286408   0.16399507918856  0.164436093304897  0.165062983327711 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.165747054768486  0.168403366795241  0.168451303695689  0.169368788214881  0.169396403785322  0.169537320077487  0.171152621827329  0.172229735479849 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.173817180779887  0.175311057047815   0.17534812349073  0.175881383563919  0.176875702572923  0.177402823273304  0.177533539467443   0.17785219662014 
+                 2                  1                  1                  1                  1                  1                  1                  1 
+ 0.178978350774519  0.179303893675008   0.18051478809327  0.182930205389899  0.184101590943836  0.185794040388926   0.18599671086256  0.186448726252128 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.187307254256049  0.188253754114999  0.188504653458107  0.192068134016118   0.19265052234479  0.193392926506801  0.194226477297697  0.194706824037488 
+                 2                  1                  1                  1                  1                  1                  1                  1 
+ 0.195174405908321  0.195713098768163  0.197243833366543  0.198678102085244  0.200456418113359  0.200882557354202  0.201288828648831  0.201301129370152 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.201577233797396  0.201848523852346  0.203001775161326   0.20301309590522  0.203679344780296  0.205009717438441  0.206664007830407  0.207178239550382 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.207563487355549  0.207831348621024  0.208369913076305  0.212605012548711  0.213507686160386  0.213837782514446  0.214196452498346  0.214245933079754 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.214271121140967  0.214424883441463  0.215678883291776  0.216026961030197   0.21838144727042    0.2197825740695  0.219806662687997  0.219931505825265 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.220413248272681  0.221319556614434   0.22136737730618  0.221499081424234  0.222684317536793  0.224038704665757  0.224136724644115  0.226493871045804 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.226537893715275  0.226609790857781  0.227219309933894  0.227308204822444  0.227625098320811  0.229431149468878  0.229660145734862  0.230733504762516 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+  0.23132696498319   0.23208115166851  0.232135953919717  0.233459111108053  0.235002518932231  0.235337297088442  0.237240652467351  0.237241133366084 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.239083069683106  0.239323835909772  0.239435804356749  0.239567223384522  0.240157799931278  0.240552491453862  0.242395391023625  0.243111365207536 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.244144261605297  0.244316268185242  0.245113028996566   0.24513296513326  0.245165190515942  0.245452329833058  0.246101300246191  0.246163889399361 
+                 1                  2                  1                  1                  1                  1                  1                  1 
+ 0.246738399741199  0.247156376129522  0.247931229403214  0.248402384141386  0.251667712894748  0.251670669340033  0.251774046570352  0.252764827657315 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+  0.25295694995297   0.25541808261085  0.257470689589158  0.257913269295556  0.257965114852727  0.258096206002348  0.258525456031879  0.261470502480724 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.261934103224772  0.262161804876637  0.262225846142985  0.265305105629134  0.266031203737268  0.266303568660446  0.269274637192005  0.269804506444019 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.270052897914525  0.270131562624824  0.272628880571821  0.272875935407641  0.274335550726026  0.274496827338145  0.274533727358523  0.276086317882611 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.277377594786137  0.278058565615634  0.278128454879226  0.278680628249631  0.278807116525301  0.279468185056123   0.28085011977097  0.282337709324896 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.282917114168382  0.283121110503383  0.284130853076489  0.285941500717496  0.287107068371743  0.289060624834663  0.289387227042198  0.289412704197617 
+                 1                  1                  1                  2                  1                  1                  1                  1 
+ 0.291011954088531  0.292450009602466  0.292588571520195   0.29356035187863  0.293597457274973  0.294745077774951  0.296216736237932  0.296351886174869 
+                 1                  1                  1                  1                  2                  1                  1                  1 
+ 0.296578318419903    0.2970871401233  0.297231133172517   0.29857593555776  0.300349006901099    0.3010633681164  0.301591487214162  0.302216130676818 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.302460600799571  0.306327825045689  0.307174412176712  0.308919637102849  0.309665884299521  0.310749904378224  0.310924504669976  0.311302322045161 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.315039844960471  0.316942500698199  0.319326961008232  0.319577403237289  0.321651461890886   0.32169142155893  0.322256514982662  0.323041753086025 
+                 2                  1                  2                  1                  1                  1                  1                  2 
+ 0.323619303618787  0.324041784792467  0.324692297532814  0.325080015693501  0.325147105267478  0.329781034787953  0.330124382779087  0.331653567027974 
+                 2                  1                  1                  1                  1                  1                  1                  1 
+ 0.332462016860344  0.332564223561175  0.332835504868023   0.33305686825321  0.333327247742697  0.333565976671682  0.334927375343956  0.335947539964612 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.336116909389173  0.336193439696731  0.336268756927092  0.336453330829489  0.339306953582107  0.339717688185219  0.340012296854684  0.340456445842383 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.341238176005685  0.341341705617932  0.342305243654658  0.342543256287507  0.344890629573352  0.345249850811717  0.345768355586898  0.347300422663218 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.347549971082296  0.347568524596023  0.347712256895953  0.348025519360146   0.34883535621208  0.350083025986164  0.351260825867313  0.354370532301216 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.355849047274854  0.357030665105378  0.358947193736899  0.359310158238616  0.359848111042915  0.360356967969096  0.362211900641487   0.36262517726417 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.362644591023017  0.363511659248948  0.363597136605655   0.36401910630499  0.365047356704011  0.365628598432691  0.366152329579421  0.366302104102875 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+  0.36706400631685  0.367222229168874  0.367231960462965  0.367957245971734  0.368807363236159  0.371180888022326  0.373383161843636  0.373663374459257 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.374431092721997  0.374709605749053  0.374912425506356  0.375911244253834  0.376748109557429  0.377015732205215  0.377120348466768  0.380398009223702 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.380815306587178  0.380968373226872  0.380998044179029  0.381735591473094  0.382265006967302  0.383690106820207  0.383718277330343  0.383788370741549 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+  0.38422877740382  0.385044099294107  0.385678873497994  0.386640495118869   0.38732352813667  0.387959438791658  0.388021762534928   0.38823540210463 
+                 1                  1                  1                  1                  1                  1                  2                  1 
+ 0.388258933968661  0.388498742877997  0.389668978829013  0.390018883341051  0.390480619418894  0.390820739220825  0.390885649090719  0.390899568230173 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.391305082157732  0.391691342381242  0.392351151020491  0.393911718974408  0.394817659990305  0.395196356916794  0.397016087072877  0.398004273488172 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.398471642009764  0.398957732696999  0.399394425370155  0.399648788951261  0.400452259148197  0.402329284102219  0.402577657297664  0.403233183186928 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.403665609024175  0.404905474399278  0.405642606084448  0.405921282530727  0.407880285046411  0.408232412798265  0.408672341605972  0.408771163892069 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.410637860703331  0.410939027861289  0.411754015533805  0.411824705829543  0.412818362171738  0.413238388279056  0.413604818667074  0.414593946826868 
+                 1                  1                  1                  1                  1                  2                  1                  1 
+ 0.415129709223629  0.415469891410879  0.416236262497694   0.41645535475654  0.416774100131423  0.417230699595512   0.41806213948421  0.418313012176079 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.420631538799601  0.421653540434053  0.421867335800891  0.422977845543359  0.424791086359834  0.424874864742493  0.425430128718478  0.428885681434814 
+                 1                  1                  1                  1                  1                  1                  1                  2 
+ 0.433971139878626   0.43430137672454  0.434693673636356  0.436996706802521  0.438044755956945  0.438121695748229  0.438447051662641  0.441009606102195 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.441505927891014  0.442050459873376  0.442579065363969  0.442787041401211  0.443577020852995  0.444125461664814  0.444153148375529  0.445130994808758 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.445405868207727  0.445590711959134  0.446032864084389   0.44718972713575  0.448383588906271  0.452221120674204  0.452231968329734  0.452477905599415 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.452922703884299  0.455280812233337  0.456492831857777  0.456936733727003  0.458061039549915  0.458106078642399  0.458614818757268  0.459895568497496 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.460278698997015  0.460606669669675   0.46102079130803  0.461444250729728   0.46257852682669  0.462872994424409  0.463398851716039  0.464453734668064 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+  0.46511289844952  0.466059104406485  0.468360719505981  0.469151079227444  0.469891114337211  0.472958363883449  0.474120412449681  0.474143775770424 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+  0.47423805821663   0.47503202183057  0.475299843525202  0.475831877488175  0.476189734931934  0.477173959217036  0.477921187280134  0.478151838943907 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.478372230384195  0.478990441512349  0.480963910851791  0.482243984959979  0.482787560876471  0.483192072237284  0.483650012624382  0.484149113607068 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.485035171333748  0.485355283295132  0.487140670956944  0.487642587392848  0.488029327199507  0.489394569119455  0.489450454803744   0.48966843967141 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.489944764678528  0.490058058548039  0.490632411897157  0.490778568930318  0.490914243354117  0.491907978456379   0.49224690820698  0.492477568565234 
+                 1                  1                  2                  1                  1                  1                  1                  1 
+ 0.494685994805737  0.494797213450982  0.496042583535388  0.496180871847508  0.496530204779401  0.498229360068897  0.498881721974402  0.500912988876925 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.501002092697921  0.502848046210572  0.503013220061199  0.504258744955031  0.505080212328668   0.50610236074206  0.507057407634076  0.507288838835225 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.509138825839333  0.510051673334704  0.510052543295616  0.511191989686265  0.511590666027651  0.512106115681426  0.513475171407009  0.513877328269463 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.514828642111282  0.516326092620388  0.517954339097649   0.51926096164948   0.51986814824414  0.520510621013016  0.520871176425634  0.523005377206661 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.523717773714006   0.52583116797503  0.527719775519576  0.528539598413721  0.529544076747705  0.530077185881255  0.532546928419925  0.532682000958952 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.532892257876965  0.533067231876674  0.533604647051325   0.53389568424999  0.534170293321109  0.534186031616689  0.534724326508217  0.534740853561268 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.535093145676029  0.536594578576756  0.537008938384871  0.539364612803897  0.539734677035223  0.540259098871892  0.541781779002966  0.542003728021292 
+                 2                  1                  1                  1                  1                  1                  1                  1 
+ 0.543448991606085  0.544508757467838  0.546199420995984  0.548819035519704  0.548897915120762   0.54899928585424  0.549124198237379  0.549284339914354 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.551515938471652  0.551666122563345  0.551702885780544  0.553005846107947  0.553064008014431  0.554343418738041  0.557127183891553   0.55724311776202 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.559777880950108  0.560889415903526  0.560917968676644  0.563699116067422  0.563831849892579  0.565861197181173  0.568368429124935   0.56852195639963 
+                 1                  1                  1                  1                  2                  1                  1                  1 
+ 0.569524601931218  0.569882524030154  0.572334715727216  0.573408119291246  0.573550103451888  0.574058953643237  0.574436693018367  0.574530660470621 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.575687613092665  0.579759752951506  0.582177820893595  0.582815108532216  0.587667705273498  0.588608132058869  0.588867751154661  0.590367836675632 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.590564427712822  0.591016537674787  0.592908679086462    0.5957915538169  0.596031430792867  0.598512762040049  0.600600128505796   0.60151103789771 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.604755096503683  0.604952192035648    0.6052558339141  0.606929488607876  0.607333793405935   0.60903928771566   0.61003424014958   0.61324969959746 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.613961277589241  0.615428122266061  0.616787903015186  0.617084867342786  0.618035438846023  0.618756092171136  0.619346826972582  0.619676335242413 
+                 2                  1                  1                  1                  1                  1                  1                  1 
+ 0.620169262785843  0.622593993009832  0.622623581464931  0.625456715150955  0.626087611051068  0.627425765138456  0.630979041678829  0.631180970453366 
+                 1                  1                  1                  1                  2                  1                  1                  1 
+ 0.631220024784102    0.6322651204074  0.632378888350024  0.633184513828184  0.635293565199603  0.636856800372851  0.638167154230511  0.638255357098291 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.640480424541033  0.642805244845959  0.646013472943065   0.64654958594859  0.650028211362861  0.650106650228162  0.650161881742584   0.65119719050083 
+                 2                  1                  1                  1                  1                  1                  1                  1 
+ 0.653394333829383  0.654346113119627  0.656438598943429  0.656745039951426  0.657938773064886  0.657952114130314  0.658171066285664  0.661379571887898 
+                 1                  2                  1                  1                  1                  1                  1                  1 
+  0.66315290699306  0.667240580438075   0.67221978833484  0.672251879266164  0.672575383359404  0.673573569834506  0.675658477185613  0.678063177523161 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.678864575648319  0.678999388704612  0.679221249039787  0.682243353688146  0.684598370664323  0.685761592889984  0.688983485860493  0.690518230196592 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.691079278147679   0.69156304045376  0.692166376094591  0.693149628935977   0.69440262140791  0.695348060515825  0.697540162817546  0.700858293638689 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+  0.70186664099682   0.70267364687905  0.704268795174259  0.704359269300944  0.704470662685465  0.704649876139201  0.704961938503574  0.709913088615688 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.710615777628204  0.711619951074781  0.713508677114073  0.713720756811457   0.71493348664834  0.715414289301971  0.725217275401693  0.727164201555468 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.729784726375692  0.729851763564505  0.730113709706206  0.732386628312192  0.734987799269642  0.735446907614294  0.738635216703102  0.742495355224989 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.743617993939346  0.748357250574335  0.748489039796629    0.7501934721259  0.750207053594841  0.750387372374676  0.751666625590768  0.752340304748657 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.752859929190513   0.75403146441043  0.755984790277797  0.763775462236149   0.76479668450285  0.767980851145564  0.768408227211078  0.770207091915632 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.773317306998182  0.780972750936484  0.781595226785734  0.782924853315572  0.785101302023139  0.785268502360267  0.785851622670646  0.786088176839932 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+  0.78902854243131  0.792832950576543  0.793920112063519  0.794215680006223   0.79760971775574  0.802210736069826   0.80346284107537   0.80430801456939 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.806060989204203  0.807368973352478  0.807568242374304  0.808240391605678  0.813750852176764  0.817311106997119  0.819324511915824  0.819439750436425 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.820113476311834  0.820381673034569  0.820852326927273  0.823234151927417  0.824023815212654  0.824114435999001  0.824999380336731  0.826876082734758 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.827562636689421   0.82824420670418  0.829375341132111  0.830832730374919  0.831391964828045  0.834867359566348  0.835426575832342  0.836199546258524 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.836346470473272   0.83782820706784  0.838643884879546  0.839258534282631  0.840522575487076  0.843989977653766  0.844466268769614  0.845751673739511 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.846991837707433  0.847092947489099  0.848959795750466  0.850438859064497  0.850642673342362  0.855292026321094  0.857836030737473   0.86001675575079 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+  0.86323769882429  0.865609839606642   0.87230704138123  0.880691254883389  0.885846641569233  0.886083428724061   0.88624470097686  0.891773329130131 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.897655195590443  0.898410138906633  0.905052557329284  0.905445147351285  0.908966415019216  0.915724724042296  0.918592144925317  0.920626735255669 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.923926358893386   0.92754017752032  0.930299589269532  0.934504871900383  0.941249648846358  0.941847424249167  0.945631433579644  0.948745802833679 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.955536386414421  0.961506431891015  0.961982892341731  0.966864108175273  0.970771551638746  0.970972533499434  0.971838625663484   0.97637921617932 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ 0.976652942496759  0.980570892288241  0.980725885448177  0.982002958043825  0.984228321053568   0.98658088003431  0.990438467195645  0.995253396174163 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+  0.99532760023164  0.996012608451246   0.99682124819304  0.997559601754145   0.99957393709051   1.00328574937781   1.00424702249645   1.00526593938486 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+  1.00904992842738   1.00908748648715   1.01227747291742   1.01441750254367   1.01580492964359   1.01592027908058   1.02237691580587   1.02259748487558 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+  1.03097505493792   1.03330134755593   1.03903882106765   1.04312439700997   1.04580427774609   1.05042826596117   1.05311206135168   1.05587538950135 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+  1.06189994325164   1.06396411021359   1.06811876784301   1.06922283237264   1.07005085620138   1.07568458850344   1.07953378516563   1.08153842603436 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+  1.08338714669617   1.08813132774783   1.09072510586966   1.09325458225434   1.09437059323153   1.09466304764151   1.09613064565521   1.10163001344046 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+  1.10264471145724   1.10362667382411   1.10380540208788   1.10407652242523   1.10422593215187   1.10578376326747   1.10811636233196   1.11211232100134 
+                 1                  1                  1                  1                  1                  2                  1                  1 
+  1.11244476807381   1.11741270615946   1.12235773139838   1.12499444706678   1.13043380648275   1.13444664664689   1.13605367290188   1.13789067514814 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+  1.14401414442419   1.15133871888569   1.15794579038905   1.16322126377037    1.1753466597472   1.17831975774483    1.1793818088947   1.18203373928298 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+  1.18352792224667   1.18524411860885   1.18544538346724   1.18800194469618   1.18808684563439   1.19527391119309   1.19685964929124   1.19748344670919 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+  1.20259105744519   1.21262858480493   1.22214101102782   1.22223929706767   1.23020544352012   1.23748218577917   1.23751218434228   1.24358596001215 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+   1.2470684174753   1.26195808335766   1.26347551617926   1.26370895602752   1.27080785760774   1.27717446687968   1.27934433635369   1.28161635202079 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+  1.28768179365658     1.314084167176    1.3205708297947   1.32273752819906   1.32597499941986   1.32771340269854   1.32927118749108   1.34372506189077 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+   1.3457666737105   1.35039190458875   1.35088470941017   1.35220269730174    1.3522856618209   1.35686944299215   1.36048878100573   1.36794556561918 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+  1.37703460738898   1.38146539908399   1.38236459853375    1.3889855093451   1.39179131033508   1.39556705280819   1.40019666628038   1.40148503848041 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+  1.40238556684356   1.41081790796524   1.43346455196287   1.43497070565629   1.43519261533727   1.43614447720962   1.43829364612807   1.44040144029132 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+  1.44100096319177   1.45042389267749   1.45419798415892   1.45494496783665   1.46163822593034   1.47108882817227   1.47289825449299   1.47509565239728 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+  1.47671927935635   1.48408537848018   1.48731715023984   1.49187616618418   1.49379053001659   1.49947402203385   1.50007267617978   1.50514944745011 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+  1.50577049315384   1.51106767033104   1.51955851733455   1.52465886734521   1.52494790118406   1.53584623147863   1.53606993092811   1.54442781899725 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+  1.55159313756048   1.55214576869847   1.55659977023001   1.56004321923416   1.56496053540465   1.57062131339218   1.57424632392601   1.59861822720717 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+  1.60015990812502   1.60292307788722   1.62263108398427    1.6540768448975   1.66272496760135   1.66625582123667   1.67163058581374    1.6787300628515 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+  1.68432072591204   1.68701185538547   1.70015034893062   1.70904395670768   1.72446045321642   1.72456446599109   1.73290216567194   1.73665564245682 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+  1.74106857891091   1.74219440170491   1.74595689125615   1.74637808281793   1.74831295753009   1.77091692612988    1.8018775811435   1.81766085245826 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+  1.82241780743768   1.83467839026113   1.83699160116743   1.85023234091045   1.85090278704751   1.86418372948177   1.86540010243902   1.87263396863311 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+  1.87403582119537   1.87455006605625   1.87543816839039   1.87742199479681   1.89079481831739   1.91875661600614   1.94608405944809   1.95114768171286 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+  1.96430770140872   1.96546037110123   1.99271485595699   1.99682454968371    2.0057020457348   2.02347420532056   2.02790077560681   2.06144626241267 
+                 1                  1                  1                  1                  1                  1                  1                  1 
+ [ reached getOption("max.print") -- omitted 139 entries ]
+> class(ANESGSS_weights$CM_hp)
+[1] "numeric"
+> class(ANESGSS_weights$V200018b)
+[1] "numeric"
+> head(ANESGSS_weights$CM_hp)
+[1] NA  3  5  2 NA  4
+> ANESGSS_weights <- ANESGSS_weights %>%
++   rowwise() %>%
++   mutate(CM_hp_w = weighted.mean(CM_hp, V200018b, na.rm = TRUE))
+> 
+> head(ANESGSS_weights$CM_hp_w)
+[1] NaN   3   5   2 NaN   4
+> lm_model <- lm(CA_mean ~ KIDSSOL_2, data = subset_kids, weights = subset_kids$V200018b)
+> summary(lm_model)
+
+Call:
+lm(formula = CA_mean ~ KIDSSOL_2, data = subset_kids, weights = subset_kids$V200018b)
+
+Weighted Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.39405 -0.07846 -0.01662  0.09611  0.76089 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 0.106443   0.021515   4.947 1.16e-06 ***
+KIDSSOL_2   0.023754   0.007941   2.991  0.00297 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1705 on 356 degrees of freedom
+  (3 observations deleted due to missingness)
+Multiple R-squared:  0.02452,	Adjusted R-squared:  0.02178 
+F-statistic: 8.949 on 1 and 356 DF,  p-value: 0.00297
+
+> lm_model <- lm(CA_mean ~ KIDSSOL_1B, data = subset_kids, weights = subset_kids$V200018b)
+> summary(lm_model)
+
+Call:
+lm(formula = CA_mean ~ KIDSSOL_1B, data = subset_kids, weights = subset_kids$V200018b)
+
+Weighted Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.41333 -0.07703 -0.01092  0.09695  0.73982 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  0.09021    0.02022   4.462 1.09e-05 ***
+KIDSSOL_1B   0.03368    0.00817   4.122 4.66e-05 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1682 on 359 degrees of freedom
+Multiple R-squared:  0.0452,	Adjusted R-squared:  0.04254 
+F-statistic: 16.99 on 1 and 359 DF,  p-value: 4.663e-05
+
+> lm_model <- lm(CR_mean ~ PARSOL_2, data = ANESGSS_weights, weights = ANESGSS_weights$V200018b)
+Error in eval(predvars, data, env) : object 'CR_mean' not found
+> lm_model <- lm(CR2_mean ~ PARSOL_2, data = ANESGSS_weights, weights = ANESGSS_weights$V200018b)
+> summary(lm_model)
+
+Call:
+lm(formula = CR2_mean ~ PARSOL_2, data = ANESGSS_weights, weights = ANESGSS_weights$V200018b)
+
+Weighted Residuals:
+    Min      1Q  Median      3Q     Max 
+-4.2031 -0.5843  0.0435  0.5677  2.7325 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  3.57661    0.08005  44.680   <2e-16 ***
+PARSOL_2     0.02987    0.02981   1.002    0.317    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.8304 on 675 degrees of freedom
+  (487 observations deleted due to missingness)
+Multiple R-squared:  0.001485,	Adjusted R-squared:  5.855e-06 
+F-statistic: 1.004 on 1 and 675 DF,  p-value: 0.3167
+
+> lm_model <- lm(CM_mean ~ PARSOL_2, data = ANESGSS_weights, weights = ANESGSS_weights$V200018b)
+> summary(lm_model)
+
+Call:
+lm(formula = CM_mean ~ PARSOL_2, data = ANESGSS_weights, weights = ANESGSS_weights$V200018b)
+
+Weighted Residuals:
+    Min      1Q  Median      3Q     Max 
+-2.3126 -0.3180  0.0215  0.4017  2.1336 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  3.04559    0.05534  55.033  < 2e-16 ***
+PARSOL_2     0.08172    0.02072   3.945 8.74e-05 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.5984 on 749 degrees of freedom
+  (413 observations deleted due to missingness)
+Multiple R-squared:  0.02035,	Adjusted R-squared:  0.01905 
+F-statistic: 15.56 on 1 and 749 DF,  p-value: 8.739e-05
+
+> lm_model <- lm(CR2_mean ~ PARSOL_2, data = ANESGSS_weights, weights = ANESGSS_weights$V200018b)
+> summary(lm_model)
+
+Call:
+lm(formula = CR2_mean ~ PARSOL_2, data = ANESGSS_weights, weights = ANESGSS_weights$V200018b)
+
+Weighted Residuals:
+    Min      1Q  Median      3Q     Max 
+-4.2031 -0.5843  0.0435  0.5677  2.7325 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  3.57661    0.08005  44.680   <2e-16 ***
+PARSOL_2     0.02987    0.02981   1.002    0.317    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.8304 on 675 degrees of freedom
+  (487 observations deleted due to missingness)
+Multiple R-squared:  0.001485,	Adjusted R-squared:  5.855e-06 
+F-statistic: 1.004 on 1 and 675 DF,  p-value: 0.3167
+
+> lm_model <- lm(CM_mean ~ PARSOL_2, data = ANESGSS_weights, weights = ANESGSS_weights$V200018b)
+> summary(lm_model)
+
+Call:
+lm(formula = CM_mean ~ PARSOL_2, data = ANESGSS_weights, weights = ANESGSS_weights$V200018b)
+
+Weighted Residuals:
+    Min      1Q  Median      3Q     Max 
+-2.3126 -0.3180  0.0215  0.4017  2.1336 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  3.04559    0.05534  55.033  < 2e-16 ***
+PARSOL_2     0.08172    0.02072   3.945 8.74e-05 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.5984 on 749 degrees of freedom
+  (413 observations deleted due to missingness)
+Multiple R-squared:  0.02035,	Adjusted R-squared:  0.01905 
+F-statistic: 15.56 on 1 and 749 DF,  p-value: 8.739e-05
+
+> lm_model <- lm(CA_mean ~ KIDSSOL_1B, data = subset_kids, weights = subset_kids$V200018b)
+> summary(lm_model)
+
+Call:
+lm(formula = CA_mean ~ KIDSSOL_1B, data = subset_kids, weights = subset_kids$V200018b)
+
+Weighted Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.41333 -0.07703 -0.01092  0.09695  0.73982 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  0.09021    0.02022   4.462 1.09e-05 ***
+KIDSSOL_1B   0.03368    0.00817   4.122 4.66e-05 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1682 on 359 degrees of freedom
+Multiple R-squared:  0.0452,	Adjusted R-squared:  0.04254 
+F-statistic: 16.99 on 1 and 359 DF,  p-value: 4.663e-05
+
+> lm_model <- lm(CM_mean ~ KIDSSOL_2, data = subset_kids, weights = subset_kids$V200018b)
+> summary(lm_model)
+
+Call:
+lm(formula = CM_mean ~ KIDSSOL_2, data = subset_kids, weights = subset_kids$V200018b)
+
+Weighted Residuals:
+     Min       1Q   Median       3Q      Max 
+-2.47140 -0.33133  0.01568  0.38183  2.24617 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  3.13612    0.07890  39.750   <2e-16 ***
+KIDSSOL_2    0.04805    0.02859   1.681   0.0938 .  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.5896 on 335 degrees of freedom
+  (24 observations deleted due to missingness)
+Multiple R-squared:  0.008361,	Adjusted R-squared:  0.0054 
+F-statistic: 2.824 on 1 and 335 DF,  p-value: 0.09377
+
+> 
+> lm_model <- lm(CM_mean ~ PARSOL_2, data = ANESGSS_weights, weights = ANESGSS_weights$V200018b)
+> summary(lm_model)
+
+Call:
+lm(formula = CM_mean ~ PARSOL_2, data = ANESGSS_weights, weights = ANESGSS_weights$V200018b)
+
+Weighted Residuals:
+    Min      1Q  Median      3Q     Max 
+-2.3126 -0.3180  0.0215  0.4017  2.1336 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  3.04559    0.05534  55.033  < 2e-16 ***
+PARSOL_2     0.08172    0.02072   3.945 8.74e-05 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.5984 on 749 degrees of freedom
+  (413 observations deleted due to missingness)
+Multiple R-squared:  0.02035,	Adjusted R-squared:  0.01905 
+F-statistic: 15.56 on 1 and 749 DF,  p-value: 8.739e-05
+
+> 
