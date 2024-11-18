@@ -12,7 +12,6 @@ library(tidyverse)
 library(psych)
 library(gmodels)
 library(interactions)
-library(survey)
 ```
 
 
@@ -878,28 +877,185 @@ ANESGSS_weights <- inner_join(ANESGSS_merged, BRIDGE2020, by = "V200001")
 #ANESGSS_merged[ANESGSS_merged=="-1"] <- NA
 ```
 
-
-#Get the weights in
+#Critical Action Scale
 ```{r}
+#getting binary variables for each type of CA
+ANESGSS_weights$CA_con <- ifelse(ANESGSS_weights$V202034 == 1 | ANESGSS_weights$V202036 == 1 | ANESGSS_weights$V202038 == 1 | ANESGSS_weights$V202040 == 1, 1, 0)
 
-svy_design <- svydesign(ids = ~1, data = ANESGSS_weights, weights = ~V200018b)
+ANESGSS_weights$CA_boyc <- ifelse(ANESGSS_weights$V202042 == 2| ANESGSS_weights$V202042 == 3| ANESGSS_weights$V202042 == 4 | ANESGSS_weights$V202042 == 5, 1, 0)
+
+ANESGSS_weights$CA_don <- ifelse(ANESGSS_weights$V202021 == 1, 1, 0)
+
+ANESGSS_weights$CA_don_o <- ifelse(ANESGSS_weights$V202028 == 1, 1, 0)
+
+ANESGSS_weights$CA_pro <- ifelse(ANESGSS_weights$V202025 == 1, 1, 0)
+
+ANESGSS_weights$CA_meetIP <- ifelse(ANESGSS_weights$V202013 == 1, 1, 0)
+
+ANESGSS_weights$CA_meetON <- ifelse(ANESGSS_weights$V202014 == 1, 1, 0)
+
+ANESGSS_weights$CA_pet <- ifelse(ANESGSS_weights$V202026 == 1, 1, 0)
+
+ANESGSS_weights$CA_cam <- ifelse(ANESGSS_weights$V202016 == 1, 1, 0)
+
+#getting cronbach's alpha
+alpha_result_CA <- alpha(ANESGSS_weights[, c("CA_con", "CA_pro", "CA_pet", "CA_meetIP", "CA_meetON", "CA_boyc", "CA_cam", "CA_don", "CA_don_o")])
+
+print(alpha_result_CA)
+
+#creating mean variable
+ANESGSS_weights$CA_mean <- (ANESGSS_weights$CA_con + ANESGSS_weights$CA_pro + ANESGSS_weights$CA_pet + ANESGSS_weights$CA_meetIP + ANESGSS_weights$CA_meetON + ANESGSS_weights$CA_boyc + ANESGSS_weights$CA_cam + ANESGSS_weights$CA_don + ANESGSS_weights$CA_don_o)/9
 ```
 
-#See Subsetted Dataset
+#Critical Reflection Scale
 ```{r}
+
+#recoding and reverse coding variables
+ANESGSS_weights$CR_slav <- recode(ANESGSS_weights$V202301,
+                          `1` = 5,
+                          `2` = 4,
+                          `3` = 3,
+                          `4` = 2,
+                          `5` = 1)
+
+ANESGSS_weights$CR_bld <- recode(ANESGSS_weights$V202302,
+                          `1` = 5,
+                          `2` = 4,
+                          `3` = 3,
+                          `4` = 2,
+                          `5` = 1)
+
+ANESGSS_weights$CR_polbw <- recode(ANESGSS_weights$V202493x,
+                          `1` = 5,
+                          `2` = 5,
+                          `3` = 4,
+                          `4` = 3,
+                          `5` = 2,
+                          `6` = 1,
+                          `7` = 1)
+
+ANESGSS_weights$CR_fedbw <- recode(ANESGSS_weights$V202490x,
+                          `1` = 5,
+                          `2` = 5,
+                          `3` = 4,
+                          `4` = 3,
+                          `5` = 2,
+                          `6` = 1,
+                          `7` = 1)
+
+
+ANESGSS_weights$CR_uu <- recode(ANESGSS_weights$V202621,
+                          `1` = 5,
+                          `2` = 5,
+                          `3` = 4,
+                          `4` = 3,
+                          `5` = 2,
+                          `6` = 1,
+                          `7` = 1)
+
+
+#renaming variables
+
+ANESGSS_weights$CR_ins <- ANESGSS_weights$V202304
+ANESGSS_weights$CR_rpdif <- ANESGSS_weights$V202305
+ANESGSS_weights$CR_opp <- ANESGSS_weights$V202317
+ANESGSS_weights$CR_wrk <- ANESGSS_weights$V202303
+
+#getting cronbach's alpha
+alpha_result_CR <- alpha(ANESGSS_weights[, c("CR_slav", "CR_rpdif", "CR_ins", "CR_wrk", "CR_polbw", "CR_fedbw", "CR_uu")])
+
+print(alpha_result_CR)
+
+#creating mean variable
+ANESGSS_weights$CR2_mean <- (ANESGSS_weights$CR_slav + ANESGSS_weights$CR_rpdif + ANESGSS_weights$CR_ins + ANESGSS_weights$CR_wrk + ANESGSS_weights$CR_polbw + ANESGSS_weights$CR_fedbw + ANESGSS_weights$CR_uu)/7
+
+```
+
+#Critical Motivation Subscale
+```{r}
+# recoding variables
+ANESGSS_weights$CM_equal <- recode(ANESGSS_weights$V202260,
+                          `1` = 5,
+                          `2` = 4,
+                          `3` = 3,
+                          `4` = 2,
+                          `5` = 1)
+
+ANESGSS_weights$CM_worry <- recode(ANESGSS_weights$V202261,
+                          `1` = 5,
+                          `2` = 4,
+                          `3` = 3,
+                          `4` = 2,
+                          `5` = 1)
+
+ANESGSS_weights$CM_rII <- recode(ANESGSS_weights$V202259x,
+                          `1` = 5,
+                          `2` = 5,
+                          `3` = 4,
+                          `4` = 3,
+                          `5` = 2,
+                          `6` = 1,
+                          `7` = 1)
+
+ANESGSS_weights$CM_und <- recode(ANESGSS_weights$V202215,
+                          `1` = 5,
+                          `2` = 4,
+                          `3` = 3,
+                          `4` = 2,
+                          `5` = 1)
+
+ANESGSS_weights$CM_pay <- recode(ANESGSS_weights$V202575,
+                          `1` = 5,
+                          `2` = 4,
+                          `3` = 3,
+                          `4` = 2,
+                          `5` = 1)
+
+ANESGSS_weights$CM_gov <- recode(ANESGSS_weights$V202255x,
+                          `1` = 1,
+                          `2` = 2,
+                          `3` = 3,
+                          `4` = 4,
+                          `5` = 5,
+                          `6` = 5)
+
+ANESGSS_weights$CM_hp <- recode(ANESGSS_weights$HELPPOOR_2,
+                          `1` = 5,
+                          `2` = 4,
+                          `3` = 3,
+                          `4` = 2,
+                          `5` = 1)
+
+ANESGSS_weights$CM_hn <- recode(ANESGSS_weights$HELPNOT_2,
+                          `1` = 5,
+                          `2` = 4,
+                          `3` = 3,
+                          `4` = 2,
+                          `5` = 1)
+
+#renaming variables
+ANESGSS_weights$CM_care <- ANESGSS_weights$V202212
+ANESGSS_weights$CM_say <- ANESGSS_weights$V202213
+ANESGSS_weights$CM_comp <- ANESGSS_weights$V202214
+ANESGSS_weights$CM_worry <- ANESGSS_weights$V202261
+ANESGSS_weights$CM_syst <- ANESGSS_weights$V202261
+ANESGSS_weights$CM_prob <- ANESGSS_weights$V202262
+
+#getting cronbach's alpha
+alpha_result_CM <- alpha(ANESGSS_weights[, c("CM_equal", "CM_und", "CM_say", "CM_pay", "CM_rII", "CM_comp", "CM_care", "CM_worry", "CM_prob", "CM_hp")])
+
+print(alpha_result_CM)
+
+#creating mean variable
+ANESGSS_weights$CM_mean <- (ANESGSS_weights$CM_equal + ANESGSS_weights$CM_und + ANESGSS_weights$CM_say + ANESGSS_weights$CM_pay + ANESGSS_weights$CM_rII + ANESGSS_weights$CM_comp + ANESGSS_weights$CM_care + ANESGSS_weights$CM_worry + ANESGSS_weights$CM_prob + ANESGSS_weights$CM_hp)/10
+```
+
+#Weighted Linear Regression with CA by Kids' SOL
+```{r}
+
+ANESGSS_weights$kids_b <- ifelse(ANESGSS_weights$KIDSSOL_1B == 6, 1, 0)
+
 subset_kids <- subset(ANESGSS_weights, kids_b == 0)
-
-
-subset_kids <- subset_kids %>%
-  rowwise() %>%
-  mutate(CA_weight = weighted.mean(c(CA_mean), V200018b))
-
-subset_kids <- subset_kids %>%
-  rowwise() %>%
-  mutate(KS_weight_1B = weighted.mean(c(KIDSSOL_1B), V200018b))
-
-model <- lm(CA_weight ~ KS_weight_1B, data = subset_kids)
-summary(model)
 
 lm_model <- lm(CA_mean ~ KIDSSOL_1B, data = subset_kids, weights = subset_kids$V200018b)
 summary(lm_model)
@@ -907,201 +1063,24 @@ summary(lm_model)
 lm_model <- lm(CM_mean ~ PARSOL_2, data = ANESGSS_weights, weights = ANESGSS_weights$V200018b)
 summary(lm_model)
 
-lm_model <- lm(CM_mean ~ KIDSSOL_2, data = subset_kids, weights = subset_kids$V200018b)
+```
+
+#Weighted Linear Regression with CM by Parents' SOL
+```{r}
+
+lm_model <- lm(CM_mean ~ PARSOL_2, data = ANESGSS_weights, weights = ANESGSS_weights$V200018b)
 summary(lm_model)
 
 ```
-#Test LM with weights for CR by PS
-```{r}
 
-ANESGSS_weights <- ANESGSS_weights %>%
-  rowwise() %>%
-  mutate(CR_weight = weighted.mean(c(CR2_mean), V200018b))
-
-ANESGSS_weights <- ANESGSS_weights %>%
-  rowwise() %>%
-  mutate(PS_weight_2 = weighted.mean(c(PARSOL_2), V200018b))
-
-model <- lm(CR_weight ~ PS_weight_2, data = ANESGSS_weights)
-summary(model)
-```
-#Test LM with weights for CM by PS
-```{r}
-
-ANESGSS_weights <- ANESGSS_weights %>%
-  rowwise() %>%
-  mutate(CM_weight = weighted.mean(c(CM_mean), V200018b))
-
-model <- lm(CM_weight ~ PS_weight_2, data = ANESGSS_weights)
-summary(model)
-
-
-```
-
-```{r}
-
-#view the contents of item V202013
-sd(ANESGSS_merged$AGE_2)
-
-```
-
-
-```{r}
-
-#view the contents of item V202013
-table(ANES_GSS2$CA_pro)
-
-```
-
-#view item V202013
-```{r}
-
-#view the contents of item V202013
-table(ANES_GSS2$reverse_difpow)
-
-```
-
-#Creating subscale variables for critical action and getting Cronbach's Alpha
-```{r}
-
-ANESGSS_merged$CA_con <- ifelse(ANESGSS_merged$V202034 == 1 | ANESGSS_merged$V202036 == 1 | ANESGSS_merged$V202038 == 1 | ANESGSS_merged$V202040 == 1, 1, 0)
-
-ANESGSS_merged$CA_boyc <- ifelse(ANESGSS_merged$V202042 == 2| ANESGSS_merged$V202042 == 3| ANESGSS_merged$V202042 == 4 | ANESGSS_merged$V202042 == 5, 1, 0)
-
-ANESGSS_merged$CA_don <- ifelse(ANESGSS_merged$V202021 == 1, 1, 0)
-
-ANESGSS_merged$CA_don_o <- ifelse(ANESGSS_merged$V202028 == 1, 1, 0)
-
-ANESGSS_merged$CA_pro <- ifelse(ANESGSS_merged$V202025 == 1, 1, 0)
-
-ANESGSS_merged$CA_meetIP <- ifelse(ANESGSS_merged$V202013 == 1, 1, 0)
-
-ANESGSS_merged$CA_meetON <- ifelse(ANESGSS_merged$V202014 == 1, 1, 0)
-
-ANESGSS_merged$CA_pet <- ifelse(ANESGSS_merged$V202026 == 1, 1, 0)
-
-ANESGSS_merged$CA_cam <- ifelse(ANESGSS_merged$V202016 == 1, 1, 0)
-
-
-
-alpha_result <- alpha(ANESGSS_merged[, c("CA_con", "CA_pro", "CA_pet", "CA_meetIP", "CA_meetON", "CA_boyc", "CA_cam", "CA_don", "CA_don_o")])
-
-print(alpha_result)
-
-ANESGSS_merged$CA_mean <- (ANESGSS_merged$CA_con + ANESGSS_merged$CA_pro + ANESGSS_merged$CA_pet + ANESGSS_merged$CA_meetIP + ANESGSS_merged$CA_meetON + ANESGSS_merged$CA_boyc + ANESGSS_merged$CA_cam + ANESGSS_merged$CA_don + ANESGSS_merged$CA_don_o)/9
-```
-
-#Getting Cronbach's Alpha for CR and CA together
-```{r}
-alpha_result <- alpha(ANES_GSS2[, c("CA_con", "CA_pro", "CA_pet", "CA_meetIP", "CA_meetON", "CA_boyc", "CA_cam", "CA_don", "CA_don_o", "CR_slav", "CR_rpdif", "CR_ins", "CR_bus", "CR_opp", "CR_wrk", "CR_bld", "CR_vio", "CR_bi", "CR_hi", "CR_bwfed", "CR_bwpol", "CR_uu", "CR_pd")])
-
-print(alpha_result)
-```
-
-
-#new CR measure
-```{r}
-
-#reverse coding for V202301
-ANESGSS_merged$CR_slav <- recode(ANESGSS_merged$V202301,
-                          `1` = 5,
-                          `2` = 4,
-                          `3` = 3,
-                          `4` = 2,
-                          `5` = 1)
-#reverse coding for V202302
-ANESGSS_merged$CR_bld <- recode(ANESGSS_merged$V202302,
-                          `1` = 5,
-                          `2` = 4,
-                          `3` = 3,
-                          `4` = 2,
-                          `5` = 1)
-#recoding and reversing scale from 7 to 5 for V202493x
-ANESGSS_merged$CR_polbw <- recode(ANESGSS_merged$V202493x,
-                          `1` = 5,
-                          `2` = 5,
-                          `3` = 4,
-                          `4` = 3,
-                          `5` = 2,
-                          `6` = 1,
-                          `7` = 1)
-#recoding and reversing scale from 7 to 5 for V202490x
-ANESGSS_merged$CR_fedbw <- recode(ANESGSS_merged$V202490x,
-                          `1` = 5,
-                          `2` = 5,
-                          `3` = 4,
-                          `4` = 3,
-                          `5` = 2,
-                          `6` = 1,
-                          `7` = 1)
-
-#recoding scale from 7 to 5 in reverse for V202621
-ANESGSS_merged$CR_uu <- recode(ANESGSS_merged$V202621,
-                          `1` = 5,
-                          `2` = 5,
-                          `3` = 4,
-                          `4` = 3,
-                          `5` = 2,
-                          `6` = 1,
-                          `7` = 1)
-
-
-#renaming variables for CR scale
-
-ANESGSS_merged$CR_ins <- ANESGSS_merged$V202304
-ANESGSS_merged$CR_rpdif <- ANESGSS_merged$V202305
-ANESGSS_merged$CR_opp <- ANESGSS_merged$V202317
-ANESGSS_merged$CR_wrk <- ANESGSS_merged$V202303
-
-alpha_result <- alpha(ANESGSS_merged[, c("CR_slav", "CR_rpdif", "CR_ins", "CR_wrk", "CR_polbw", "CR_fedbw", "CR_uu")])
-
-print(alpha_result)
-
-ANESGSS_merged$CR2_mean <- (ANESGSS_merged$CR_slav + ANESGSS_merged$CR_rpdif + ANESGSS_merged$CR_ins + ANESGSS_merged$CR_wrk + ANESGSS_merged$CR_polbw + ANESGSS_merged$CR_fedbw + ANESGSS_merged$CR_uu)/7
-
-```
-
-
-
-
-#work on kids and ca
-```{r}
-
-ANESGSS_merged$kids_b <- ifelse(ANESGSS_merged$KIDSSOL_1B == 6, 1, 0)
-
-model <- lm(CA_mean ~ kids_b, data = ANESGSS_merged)
-
-summary(model)
-
-```
-
-#linear model on kids' sol and CA
-```{r}
-
-model <- lm(CR2_mean ~ PARSOL_2, data = ANESGSS_merged)
-
-summary(model)
-
-```
-#linear model on kids' sol and CA
-```{r}
-
-
-model <- lm(CA_mean ~ KIDSSOL_1B, data = data_subset)
-
-summary(model)
-
-```
-
-
-#Subscale 1 egal
+#Subscale 1 Critical Reflection Eglitarianism WIP
 ```{r}
 alpha_result <- alpha(ANES_GSS2[, c("CR_pd", "CR_wor", "CR_equal")])
 
 print(alpha_result)
 ```
 
-#Subscale 2 perceived inequality short version
+#Subscale 2 Critical Reflection Perceived Inequality Short Version WIP
 ```{r}
 alpha_result <- alpha(ANES_GSS2[, c("CR_slav", "CR_rpdif", "CR_ins", "CR_opp", "CR_wrk", "CR_bld", "CR_bi", "CR_hi", "CR_bwfed", "CR_bwpol", "CR_cc", "CR_wom")])
 
@@ -1111,7 +1090,7 @@ ANES_GSS2$CRPI_mean <- (ANES_GSS2$CR_slav + ANES_GSS2$CR_rpdif + ANES_GSS2$CR_in
 
 ```
 
-#Subscale 2 perceived inequality long version
+#Subscale 2 Critical Reflection Perceived Inequality Long Version WIP
 ```{r}
 
 ANES_GSS2$CRPI_mean <- (ANES_GSS2$CR_slav + ANES_GSS2$CR_rpdif + ANES_GSS2$CR_ins + ANES_GSS2$CR_bus + ANES_GSS2$CR_opp + ANES_GSS2$CR_wrk + ANES_GSS2$CR_bld + ANES_GSS2$CR_vio + ANES_GSS2$CR_bi + ANES_GSS2$CR_hi + ANES_GSS2$CR_bwfed + ANES_GSS2$CR_bwpol + ANES_GSS2$CR_cc + ANES_GSS2$CR_cca + ANES_GSS2$CR_lies + ANES_GSS2$CR_wom)/17
@@ -1121,133 +1100,13 @@ alpha_result <- alpha(ANES_GSS2[, c("CR_slav", "CR_rpdif", "CR_ins", "CR_bus", "
 print(alpha_result)
 ```
 
-#Critical reflection long version
+#Critical Reflection Scale Long Version WIP
 ```{r}
 alpha_result <- alpha(ANES_GSS2[, c("CR_slav", "CR_rpdif", "CR_ins", "CR_bus", "CR_opp", "CR_wrk", "CR_bld", "CR_vio", "CR_bi", "CR_hi", "CR_bwfed", "CR_bwpol", "CR_uu", "CR_pd", "CR_cc", "CR_cca", "CR_lies", "CR_wom", "CR_wor", "CR_equal")])
 
 print(alpha_result)
 ```
-#Creating subscale variables for Critical Motivation and getting Cronbach's Alpha
-```{r}
-table(ANESGSS_merged$CM_worry)
-# coding variables
-ANESGSS_merged$CM_equal <- recode(ANESGSS_merged$V202260,
-                          `1` = 5,
-                          `2` = 4,
-                          `3` = 3,
-                          `4` = 2,
-                          `5` = 1)
 
-ANESGSS_merged$CM_worry <- recode(ANESGSS_merged$V202261,
-                          `1` = 5,
-                          `2` = 4,
-                          `3` = 3,
-                          `4` = 2,
-                          `5` = 1)
-
-ANESGSS_merged$CM_rII <- recode(ANESGSS_merged$V202259x,
-                          `1` = 5,
-                          `2` = 5,
-                          `3` = 4,
-                          `4` = 3,
-                          `5` = 2,
-                          `6` = 1,
-                          `7` = 1)
-
-ANESGSS_merged$CM_und <- recode(ANESGSS_merged$V202215,
-                          `1` = 5,
-                          `2` = 4,
-                          `3` = 3,
-                          `4` = 2,
-                          `5` = 1)
-
-ANESGSS_merged$CM_pay <- recode(ANESGSS_merged$V202575,
-                          `1` = 5,
-                          `2` = 4,
-                          `3` = 3,
-                          `4` = 2,
-                          `5` = 1)
-
-ANESGSS_merged$CM_gov <- recode(ANESGSS_merged$V202255x,
-                          `1` = 1,
-                          `2` = 2,
-                          `3` = 3,
-                          `4` = 4,
-                          `5` = 5,
-                          `6` = 5)
-
-ANESGSS_merged$CM_hp <- recode(ANESGSS_merged$HELPPOOR_2,
-                          `1` = 5,
-                          `2` = 4,
-                          `3` = 3,
-                          `4` = 2,
-                          `5` = 1)
-
-ANESGSS_merged$CM_hn <- recode(ANESGSS_merged$HELPNOT_2,
-                          `1` = 5,
-                          `2` = 4,
-                          `3` = 3,
-                          `4` = 2,
-                          `5` = 1)
-
-ANESGSS_merged$CM_care <- ANESGSS_merged$V202212
-ANESGSS_merged$CM_say <- ANESGSS_merged$V202213
-ANESGSS_merged$CM_comp <- ANESGSS_merged$V202214
-ANESGSS_merged$CM_worry <- ANESGSS_merged$V202261
-ANESGSS_merged$CM_syst <- ANESGSS_merged$V202261
-ANESGSS_merged$CM_prob <- ANESGSS_merged$V202262
-
-ANESGSS_weights <- ANESGSS_weights %>%
-  rowwise() %>%
-  mutate(CM_equal_w = weighted.mean(c(CM_equal), V200018b, na.rm = TRUE))
-
-ANESGSS_weights <- ANESGSS_weights %>%
-  rowwise() %>%
-  mutate(CM_und_w = weighted.mean(c(CM_und), V200018b, na.rm = TRUE))
-
-ANESGSS_weights <- ANESGSS_weights %>%
-  rowwise() %>%
-  mutate(CM_say_w = weighted.mean(c(CM_say), V200018b, na.rm = TRUE))
-
-ANESGSS_weights <- ANESGSS_weights %>%
-  rowwise() %>%
-  mutate(CM_pay_w = weighted.mean(c(CM_pay), V200018b, na.rm = TRUE))
-
-ANESGSS_weights <- ANESGSS_weights %>%
-  rowwise() %>%
-  mutate(CM_rII_w = weighted.mean(c(CM_rII), V200018b, na.rm = TRUE))
-
-ANESGSS_weights <- ANESGSS_weights %>%
-  rowwise() %>%
-  mutate(CM_comp_w = weighted.mean(c(CM_comp), V200018b, na.rm = TRUE))
-
-ANESGSS_weights <- ANESGSS_weights %>%
-  rowwise() %>%
-  mutate(CM_care_w = weighted.mean(c(CM_care), V200018b, na.rm = TRUE))
-
-ANESGSS_weights <- ANESGSS_weights %>%
-  rowwise() %>%
-  mutate(CM_worry_w = weighted.mean(c(CM_worry), V200018b, na.rm = TRUE))
-
-ANESGSS_weights <- ANESGSS_weights %>%
-  rowwise() %>%
-  mutate(CM_prob_w = weighted.mean(c(CM_prob), V200018b, na.rm = TRUE))
-
-ANESGSS_weights <- ANESGSS_weights %>%
-  rowwise() %>%
-  mutate(CM_hp_w = weighted.mean(CM_hp, V200018b, na.rm = TRUE))
-
-
-alpha_result <- alpha(ANESGSS_weights[, c("CM_equal_w", "CM_und_w", "CM_say_w", "CM_pay_w", "CM_rII_w", "CM_comp_w", "CM_care_w", "CM_worry_w", "CM_prob_w", "CM_hp_w")])
-
-print(alpha_result)
-
-alpha_result <- alpha(ANESGSS_merged[, c("CM_equal", "CM_und", "CM_say", "CM_pay", "CM_rII", "CM_comp", "CM_care", "CM_worry", "CM_prob", "CM_hp")])
-
-print(alpha_result)
-
-ANESGSS_merged$CM_mean <- (ANESGSS_merged$CM_equal + ANESGSS_merged$CM_und + ANESGSS_merged$CM_say + ANESGSS_merged$CM_pay + ANESGSS_merged$CM_rII + ANESGSS_merged$CM_comp + ANESGSS_merged$CM_care + ANESGSS_merged$CM_worry + ANESGSS_merged$CM_prob + ANESGSS_merged$CM_hp)/10
-```
 
 #Creating anticommumnism subscale
 ```{r}
@@ -1283,101 +1142,75 @@ ANESGSS_merged$AC_mean_2 <- (ANESGSS_merged$AC_col_2 + ANESGSS_merged$AC_lib_2 +
 ANESGSS_merged$AC_mean_1B <- (ANESGSS_merged$AC_col_1B + ANESGSS_merged$AC_lib_1B + ANESGSS_merged$AC_spk_1B) /3
 
 ```
-#work on kids and ca
+#Weighted Moderation Analysis for CA by CR and CM
 ```{r}
 
-model <- lm(CA_mean ~ CR2_mean*CM_mean, data = ANESGSS_merged)
+model <- lm(CA_mean ~ CR2_mean * CM_mean, data = ANESGSS_weights, weights = ANESGSS_weights$V200018b)
 
 summary(model)
 
-interact_plot(model, pred = CR2_mean, modx = CM_mean, plot.points = TRUE)
 ```
-#work on kids and ca
+```
+
+#Bar Graph for Critical Reflection by Region
 ```{r}
+summary_data_CR <- ANESGSS_weights %>%
+ group_by(REGION_2) %>%
+summarise(mean_CR2 = mean(CR2_mean, na.rm = TRUE))
 
-model <- lm(CA_mean ~ CM_mean, data = ANESGSS_merged)
+region_labels <- c("1" = "NE", "2" = "Mid Atl", "3" = "ENC", "4" = "WNC", "5" = "S Atl", "6" = "ESC", "7" = "WSC", "8" = "Mountain", "9" = "Pacific")
 
-summary(model)
+summary_data$REGION_2 <- factor(summary_data_CR$REGION_2)
 
-interact_plot(model, pred = CR2_mean, modx = CM_mean, plot.points = TRUE)
+ggplot(summary_data_CR, aes(x = REGION_2, y = mean_CR2)) +
+  geom_bar(stat = "identity", fill = "skyblue") +
+  scale_x_discrete(labels = region_labels) +
+  labs(title = "Bar Graph showing Mean of Critical Reflection by Region", 
+       x = "Region", 
+       y = "Mean of Critical Reflection") +
+  theme_minimal()
+
 ```
 
-#Crosstabs by region
+#Bar Graph for Critical Action by Region
 ```{r}
-CrossTable(ANES_GSS2$CR_mean, ANESGSS_merged$V202439)
+summary_data_CA <- ANESGSS_weights %>%
+ group_by(REGION_2) %>%
+summarise(mean_CA = mean(CA_mean, na.rm = TRUE))
+
+region_labels <- c("1" = "NE", "2" = "Mid Atl", "3" = "ENC", "4" = "WNC", "5" = "S Atl", "6" = "ESC", "7" = "WSC", "8" = "Mountain", "9" = "Pacific")
+
+summary_data_CA$REGION_2 <- factor(summary_data_CA$REGION_2)
+
+ggplot(summary_data_CA, aes(x = REGION_2, y = mean_CA)) +
+  geom_bar(stat = "identity", fill = "skyblue") +
+  scale_x_discrete(labels = region_labels) +
+  labs(title = "Bar Graph showing Mean of Critical Action by Region", 
+       x = "Region", 
+       y = "Mean of Critical Action") +
+  theme_minimal()
 
 ```
-#Crosstabs by region for CA
+
+#Bar Graph for Critical Motivation by Region
 ```{r}
-CrossTable(ANES_GSS2$CA_mean, ANESGSS_merged$REGION_2)
+summary_data_CM <- ANESGSS_weights %>%
+ group_by(REGION_2) %>%
+summarise(mean_CM = mean(CM_mean, na.rm = TRUE))
+
+region_labels <- c("1" = "NE", "2" = "Mid Atl", "3" = "ENC", "4" = "WNC", "5" = "S Atl", "6" = "ESC", "7" = "WSC", "8" = "Mountain", "9" = "Pacific")
+
+summary_data_CM$REGION_2 <- factor(summary_data_CM$REGION_2)
+
+ggplot(summary_data_CM, aes(x = REGION_2, y = mean_CM)) +
+  geom_bar(stat = "identity", fill = "skyblue") +
+  scale_x_discrete(labels = region_labels) +
+  labs(title = "Bar Graph showing Mean of Critical Motivation by Region", 
+       x = "Region", 
+       y = "Mean of Critical Motivation ") +
+  theme_minimal()
 
 ```
-
-#view item for subset check
-```{r}
-
-#view the contents of item v202023
-
-table(ANES_GSS2$V202408)
-
-table(ANESGSS_merged$CM_know)
-
-#check to see the variable type as recorded in R
-class(ANES_GSS2$V202023)
-
-
-#make this variable numeric
-ANES_GSS2$V202023 <- as.numeric(ANES_GSS2$V202023)
-
-
-# Recode -1 and -9 to NA in the V202023 variable
-ANES_GSS2 <- ANES_GSS2 %>%
-  mutate(V202023 = replace(V202023, V202023 %in% c(-1, -9), NA))
-
-
-#view the contents of item v202023 after recoding
-
-table(ANES_GSS2$V202023)
-```
-
-#view item v202023
-```{r}
-
-#view the contents of item v202023
-
-table(ANES_GSS2$V202260)
-
-#check to see the variable type as recorded in R
-class(ANES_GSS2$V202023)
-
-
-#make this variable numeric
-ANES_GSS2$V202023 <- as.numeric(ANES_GSS2$V202023)
-
-
-# Recode -1 and -9 to NA in the V202023 variable
-ANES_GSS2 <- ANES_GSS2 %>%
-  mutate(V202023 = replace(V202023, V202023 %in% c(-1, -9), NA))
-
-
-#view the contents of item v202023 after recoding
-
-table(ANES_GSS2$V202023)
-```
-class(ANES_GSS2$V202014)
-
-#Making variables numeric
-```{r}
-#make the following vars numeric
-ANES_GSS2$V202042 <- as.numeric(ANES_GSS2$V202042)
-
-ANES_GSS2$V202119 <- as.numeric(ANES_GSS2$V202119)
-
-```
-
-
-
-
 
 
 #Rename variables to use more descriptive variable names
@@ -1606,17 +1439,6 @@ ANES_GSS2 <- ANES_GSS2 %>%
 
 #view data frame now that you changed the variable name
 head(ANES_GSS2)
-```
-
-
-
-
-
-
-#Save the Wide format Combined data
-```{r}
-#Save merged dataframe as a .csv
-write.csv(ANESGSS_merged, "ANESGSS_merged2.csv")
 ```
 
 #Subset core GSS items with 2018 and 2020 data (1a = 2016, 1b = 2018, 2 = 2020)
